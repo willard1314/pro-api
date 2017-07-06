@@ -209,7 +209,6 @@ public class JMXClientUtil {
 		String port = args[1];
 		String AppName = args[2];
 		String operation = args[3];*/
-		//System.out.println("执行结果"+operationMBeanMethod("10.6.80.4", "6300", "RIMU", "sihSynchHelper", "showPnrOriginalText", "RCTR:C/MC28S4"));
 		
 	}
 
