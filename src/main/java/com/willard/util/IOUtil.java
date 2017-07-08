@@ -15,11 +15,32 @@ import java.net.FileNameMap;
 import java.net.URLConnection;
 
 
+
 /**
- * IO读写工具集
+ * 
+ * <p>Title: IOUtil </p>
+ * <p>Description: IO流操作工具类</p>
+ * Date: 2017年7月8日下午6:19:38
+ * @author zl
+ * @version 1.0 
+ * Significant Modify：通过工厂模式优化工具类
+ * Date               Author           Content
+ * ==========================================================
+ * 2017年7月8日           zl        创建文件,实现基本功能
+ * 
+ * ==========================================================
  */
 public class IOUtil {
-	
+	//1 私有化构造函数
+	private IOUtil(){}
+	//2 静态内部类
+	private static class SingletonIO{
+		private static final IOUtil instance = new IOUtil();
+	}
+	//3 对外提供公共实例
+	public static final IOUtil getInstance(){
+		return SingletonIO.instance;
+	}
 	
 	
 	/**
