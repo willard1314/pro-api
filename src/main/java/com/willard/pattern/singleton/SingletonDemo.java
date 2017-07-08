@@ -21,7 +21,11 @@ import java.util.Set;
  */
 public class SingletonDemo {
 	
+	
 	private SingletonDemo(){}
+	
+	
+	//2 private SingletonDemo(){}
 	private static SingletonDemo lazySingle = null ;
 	//懒汉式采用加锁的方式进行解决多线程环境下存在的安全问题
 	public static SingletonDemo  getInstance() {

@@ -26,7 +26,7 @@ public class LogUtil {
 			String loglevel = ConfigUtil.getProperty(null, "LogUtil.LogLevel", false);
 			String logbasedir = ConfigUtil.getProperty(null, "LogUtil.LogFileBaseDir", false);
 			if(logbasedir.indexOf("{DefaultLogPath}")>=0){
-				String curClassPath = (new IOUtil()).getClass().getResource("/").getFile().toString();
+				String curClassPath = (IOUtil.getInstance()).getClass().getResource("/").getFile().toString();
 				String curWebRootPath = (new File(curClassPath)).getParentFile().getParentFile().toString();
 				String logDir = curWebRootPath+File.separator+"Log";
 				logbasedir = logbasedir.trim().replace("{DefaultLogPath}",  logDir);
